@@ -14,6 +14,7 @@
 		5B829F3A2E38E2BC0069D831 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5B829F392E38E2BC0069D831 /* SnapKit */; };
 		5B829F432E38E3AB0069D831 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B829F422E38E3AB0069D831 /* HomeView.swift */; };
 		5B829F452E38E4910069D831 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B829F442E38E4910069D831 /* HomeViewController.swift */; };
+		5BDECC2F2E42D5B00001E341 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDECC2E2E42D5B00001E341 /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		5B829F322E38E20E0069D831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B829F422E38E3AB0069D831 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5B829F442E38E4910069D831 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5BDECC2E2E42D5B00001E341 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				5B829F422E38E3AB0069D831 /* HomeView.swift */,
+				5BDECC2E2E42D5B00001E341 /* HomeTableViewCell.swift */,
 				5B829F442E38E4910069D831 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B829F432E38E3AB0069D831 /* HomeView.swift in Sources */,
+				5BDECC2F2E42D5B00001E341 /* HomeTableViewCell.swift in Sources */,
 				5B829F252E38E20A0069D831 /* AppDelegate.swift in Sources */,
 				5B829F272E38E20A0069D831 /* SceneDelegate.swift in Sources */,
 				5B829F452E38E4910069D831 /* HomeViewController.swift in Sources */,
