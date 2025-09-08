@@ -15,7 +15,11 @@ class HomeViewController: UIViewController {
         "Episódio 01: A Lenda de Seiya",
         "Episódio 02: O Despertar de Shiryu",
         "Episódio 03: O Golpe de Hyoga",
-        "Episódio 04: Ikki Retorna das Sombras"
+        "Episódio 04: Ikki Retorna das Sombras",
+        "Episódio 05: A Lenda de Seiya",
+        "Episódio 06: O Despertar de Shiryu",
+        "Episódio 07: O Golpe de Hyoga",
+        "Episódio 08: Ikki Retorna das Sombras"
     ]
     
     override func loadView() {

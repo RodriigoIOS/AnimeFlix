@@ -17,7 +17,7 @@ class HomeView: UIView {
         return tableView
     }()
 
-    let titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Os Cavaleiros do Zodiaco"
         label.font = .boldSystemFont(ofSize: 24)
