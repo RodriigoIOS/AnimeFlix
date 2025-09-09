@@ -5,7 +5,9 @@
 //  Created by Rodrigo on 29/07/25.
 //
 
+import Foundation
 import UIKit
+import Alamofire
 import SnapKit
 
 class HomeView: UIView {

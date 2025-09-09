@@ -17,8 +17,13 @@
 		5B829F452E38E4910069D831 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B829F442E38E4910069D831 /* HomeViewController.swift */; };
 		5BDECC2F2E42D5B00001E341 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDECC2E2E42D5B00001E341 /* HomeTableViewCell.swift */; };
 		5BF1CB332E6F088500C0717B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF1CB322E6F088500C0717B /* NetworkManager.swift */; };
-		5BF1CB352E6F0F6C00C0717B /* AnimeRespose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF1CB342E6F0F6C00C0717B /* AnimeRespose.swift */; };
+		5BF1CB352E6F0F6C00C0717B /* AnimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF1CB342E6F0F6C00C0717B /* AnimeResponse.swift */; };
 		5BF1CB372E6F107800C0717B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF1CB362E6F107800C0717B /* HomeViewModel.swift */; };
+		5BF1CB392E6FD24D00C0717B /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF1CB382E6FD24D00C0717B /* Anime.swift */; };
+		5BF1CB3B2E6FD26C00C0717B /* AnimeImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF1CB3A2E6FD26C00C0717B /* AnimeImages.swift */; };
+		5BF1CB3D2E6FD28E00C0717B /* AnimeImageJPG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF1CB3C2E6FD28E00C0717B /* AnimeImageJPG.swift */; };
+		5BF1CB4F2E6FDC8500C0717B /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5BF1CB4E2E6FDC8500C0717B /* SDWebImage */; };
+		5BF1CB512E6FDC8500C0717B /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5BF1CB502E6FDC8500C0717B /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +37,11 @@
 		5B829F442E38E4910069D831 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5BDECC2E2E42D5B00001E341 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		5BF1CB322E6F088500C0717B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		5BF1CB342E6F0F6C00C0717B /* AnimeRespose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeRespose.swift; sourceTree = "<group>"; };
+		5BF1CB342E6F0F6C00C0717B /* AnimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeResponse.swift; sourceTree = "<group>"; };
 		5BF1CB362E6F107800C0717B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5BF1CB382E6FD24D00C0717B /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
+		5BF1CB3A2E6FD26C00C0717B /* AnimeImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeImages.swift; sourceTree = "<group>"; };
+		5BF1CB3C2E6FD28E00C0717B /* AnimeImageJPG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeImageJPG.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF1CB4F2E6FDC8500C0717B /* SDWebImage in Frameworks */,
 				5B829F3A2E38E2BC0069D831 /* SnapKit in Frameworks */,
+				5BF1CB512E6FDC8500C0717B /* SDWebImageMapKit in Frameworks */,
 				5B80271A2E49381D001AC0A9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,7 +85,6 @@
 				5B829F3C2E38E2F30069D831 /* Resources */,
 				5B829F3B2E38E2EB0069D831 /* App */,
 				5B829F322E38E20E0069D831 /* Info.plist */,
-				5BF1CB342E6F0F6C00C0717B /* AnimeRespose.swift */,
 			);
 			path = AnimeFlix;
 			sourceTree = "<group>";
@@ -109,6 +118,10 @@
 		5B829F3E2E38E3040069D831 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5BF1CB342E6F0F6C00C0717B /* AnimeResponse.swift */,
+				5BF1CB3C2E6FD28E00C0717B /* AnimeImageJPG.swift */,
+				5BF1CB3A2E6FD26C00C0717B /* AnimeImages.swift */,
+				5BF1CB382E6FD24D00C0717B /* Anime.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -158,6 +171,8 @@
 			packageProductDependencies = (
 				5B829F392E38E2BC0069D831 /* SnapKit */,
 				5B8027192E49381D001AC0A9 /* Alamofire */,
+				5BF1CB4E2E6FDC8500C0717B /* SDWebImage */,
+				5BF1CB502E6FDC8500C0717B /* SDWebImageMapKit */,
 			);
 			productName = AnimeFlix;
 			productReference = 5B829F212E38E20A0069D831 /* AnimeFlix.app */;
@@ -190,6 +205,7 @@
 			packageReferences = (
 				5B829F382E38E2BB0069D831 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				5B8027182E49381D001AC0A9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5BF1CB4D2E6FDC8500C0717B /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 5B829F222E38E20A0069D831 /* Products */;
 			projectDirPath = "";
@@ -218,13 +234,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B829F432E38E3AB0069D831 /* HomeView.swift in Sources */,
-				5BF1CB352E6F0F6C00C0717B /* AnimeRespose.swift in Sources */,
+				5BF1CB352E6F0F6C00C0717B /* AnimeResponse.swift in Sources */,
 				5BDECC2F2E42D5B00001E341 /* HomeTableViewCell.swift in Sources */,
 				5BF1CB372E6F107800C0717B /* HomeViewModel.swift in Sources */,
+				5BF1CB3B2E6FD26C00C0717B /* AnimeImages.swift in Sources */,
 				5BF1CB332E6F088500C0717B /* NetworkManager.swift in Sources */,
+				5BF1CB3D2E6FD28E00C0717B /* AnimeImageJPG.swift in Sources */,
 				5B829F252E38E20A0069D831 /* AppDelegate.swift in Sources */,
 				5B829F272E38E20A0069D831 /* SceneDelegate.swift in Sources */,
 				5B829F452E38E4910069D831 /* HomeViewController.swift in Sources */,
+				5BF1CB392E6FD24D00C0717B /* Anime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +475,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		5BF1CB4D2E6FDC8500C0717B /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = exactVersion;
+				version = 5.19.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -468,6 +495,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5B829F382E38E2BB0069D831 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		5BF1CB4E2E6FDC8500C0717B /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5BF1CB4D2E6FDC8500C0717B /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		5BF1CB502E6FDC8500C0717B /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5BF1CB4D2E6FDC8500C0717B /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

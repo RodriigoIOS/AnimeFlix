@@ -5,12 +5,17 @@
 //  Created by Rodrigo on 08/09/25.
 //
 
-class HomeViewModel {
-    
-    var animes: [Anime] = []
+import Foundation
+import UIKit
+import Alamofire
+
+final class HomeViewModel {
+
+    private(set) var animes: [Anime] = []
+
     var onDataFetched: (() -> Void)?
     var onError: ((String) -> Void)?
-    
+
     func fetchAnimes() {
         NetworkManager.shared.fetchAnimes { [weak self] result in
             switch result {
