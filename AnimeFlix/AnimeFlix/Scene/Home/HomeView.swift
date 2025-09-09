@@ -5,7 +5,9 @@
 //  Created by Rodrigo on 29/07/25.
 //
 
+import Foundation
 import UIKit
+import Alamofire
 import SnapKit
 
 class HomeView: UIView {
@@ -17,7 +19,7 @@ class HomeView: UIView {
         return tableView
     }()
 
-    let titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Os Cavaleiros do Zodiaco"
         label.font = .boldSystemFont(ofSize: 24)

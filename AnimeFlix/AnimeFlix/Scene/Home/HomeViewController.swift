@@ -1,57 +1,75 @@
-//
-//  HomeViewController.swift
-//  AnimeFlix
-//
-//  Created by Rodrigo on 29/07/25.
-//
 
+// Classe principal HomeViewController
+
+import Foundation
 import UIKit
+import Alamofire
 
-class HomeViewController: UIViewController {
-    
-    private let customView = HomeView()
-    
-    var mockTitles = [
-        "Episódio 01: A Lenda de Seiya",
-        "Episódio 02: O Despertar de Shiryu",
-        "Episódio 03: O Golpe de Hyoga",
-        "Episódio 04: Ikki Retorna das Sombras"
-    ]
-    
+final class HomeViewController: UIViewController {
+
+    private let homeView = HomeView()
+    private let viewModel = HomeViewModel()
+
+    // MARK: - Lifecycle
     override func loadView() {
-        self.view = customView
+        view = homeView
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         title = "AnimeFlix"
         configureTableView()
+        bindViewModel()
+        viewModel.fetchAnimes()
     }
-    
-    func configureTableView(){
-        customView.tableView.dataSource = self
-        customView.tableView.delegate = self
-        customView.tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
+
+    // MARK: - Setup tableView
+    private func configureTableView() {
+        homeView.tableView.dataSource = self
+        homeView.tableView.delegate = self
+        homeView.tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
+        homeView.tableView.estimatedRowHeight = 80
+        homeView.tableView.rowHeight = UITableView.automaticDimension
+    }
+
+    private func bindViewModel() {
+        viewModel.onDataFetched = { [weak self] in
+            DispatchQueue.main.async {
+                print("Dados recebidos: \(self?.viewModel.animes.count ?? 0) animes")
+                self?.homeView.tableView.reloadData()
+            }
+        }
+
+        viewModel.onError = { [weak self] message in
+            DispatchQueue.main.async {
+                print("Erro no ViewModel: \(message)")
+            }
+        }
     }
 }
 
+// MARK: - UITableViewDataSource / Delegate
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mockTitles.count
+        return viewModel.animes.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as? HomeTableViewCell else {
             return UITableViewCell()
         }
-        cell.configure(with: mockTitles[indexPath.row])
+
+        let anime = viewModel.animes[indexPath.row]
+        cell.configure(with: anime)
+
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print("Selecionou: \(mockTitles[indexPath.row])")
+        let anime = viewModel.animes[indexPath.row]
+        print("▶️ Selecionado: \(anime.title)")
     }
 }
